@@ -15,9 +15,9 @@ class Dashing.Time extends Dashing.Widget
     timeData =  data[0][10].split(":");
     console.log(data);
 
-    h = timeData[0];
-    m = timeData[1];
-    s = timeData[2];
+    h = timeData[0].trim();
+    m = timeData[1].trim();
+    s = timeData[2].trim();
 
   updateClock: =>
     if h <= 0
@@ -51,5 +51,5 @@ class Dashing.Time extends Dashing.Widget
     @set('time', h + ":" + m + ":" + s);
 
   formatTime: (i) ->
-    if i < 10 then "0" + i else i
+    if i.toString().length < 2 then "0" + i else i
 
