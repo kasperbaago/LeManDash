@@ -17,6 +17,7 @@ class Dashing.Time extends Dashing.Widget
     # Example: $(@node).fadeOut().fadeIn() will make the node flash each time data comes in.
     data = JSON.parse(data.data);
     timeData =  data[0][10].split(":");
+    console.log(data);
 
     if timeData[0] <= oldTimeH && timeData[1] <= oldTimeM && timeData[2] < oldTimeS
       h = timeData[0];
