@@ -4,19 +4,15 @@
   .flag {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 85%;
   }
 
-  .flag[data-flagstatus=yellowFlag] {
-    background-color: yellow;
+  .flag[data-flagstatus=chkFlag] {
+    background-color: white;
   }
 
   .flag[data-flagstatus=redFlag] {
     background-color: red;
-  }
-
-  .flag[data-flagstatus=greenFlag] {
-    background-color: green;
   }
 
   .flag[data-flagstatus=greenFlag] {

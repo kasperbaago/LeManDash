@@ -11,6 +11,6 @@ class Dashing.Flag extends Dashing.Widget
     data = JSON.parse(data.data);
     flagStatus = data[0][1];
     console.log(flagStatus);
-    flags = ['', 'offFlag', 'greenFlag', 'redFlag', 'yellowFlag'];
+    flags = ['', 'offFlag', 'greenFlag', 'redFlag', 'chkFlag'];
 
     $(@node).find('.flag').attr('data-flagStatus', flags[flagStatus]);
