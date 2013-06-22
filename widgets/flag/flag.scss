@@ -1,3 +1,25 @@
+
+@-webkit-keyframes flashingText {
+  0%   { opacity: 0; }
+  80% {opacity: 1; }
+  100% { opacity: 0; }
+}
+@-moz-keyframes flashingText {
+  0%   { opacity: 0; }
+  80% {opacity: 1; }
+  100% { opacity: 0; }
+}
+@-o-keyframes flashingText {
+  0%   { opacity: 0; }
+  80% {opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes flashingText {
+  0%   { opacity: 0; }
+  80% {opacity: 1; }
+  100% { opacity: 0; }
+}
+
 .widget-flag {
   .flag {
     display: block;
@@ -5,19 +27,90 @@
     height: 85%;
   }
 
-  .flag[data-flagstatus=chkFlag] {
-    background-color: white;
+  .status {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
   }
 
-  .flag[data-flagstatus=redFlag] {
-    background-color: red;
+  // STATUSSES //
+
+  .flag[data-flagstatus=safetyCarStatus] {
+    .safetyCarStatus {
+      opacity: 1;
+    }
   }
 
-  .flag[data-flagstatus=greenFlag] {
-    background-color: green;
+  .flag[data-flagstatus=yellowFlagStatus] {
+    .yellowFlagStatus {
+      opacity: 1;
+    }
   }
 
-  .flag[data-flagstatus=offFlag] {
-    display: none;
+  .flag[data-flagstatus=greenFlagStatus] {
+    .greenFlagStatus {
+      opacity: 1;
+    }
   }
+
+  .flag[data-flagstatus=redFlagStatus] {
+    .redFlagStatus {
+      opacity: 1;
+    }
+  }
+
+  .flag[data-flagstatus=chkFlagStatus] {
+    .chkFlagStatus {
+      opacity: 1;
+    }
+  }
+
+  // TILES //
+  $font: 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  .tile {
+    position: relative;
+    display:inline-block;
+    margin: 0 auto;
+    overflow:hidden;
+    width:300px;
+    height:300px;
+  }
+
+  .yellowFlag {
+    background: #ffc91f url('http://s.cdpn.io/48308/flagbg.png');
+  }
+
+  .redFlag {
+    background: #d13c28 url('http://s.cdpn.io/48308/flagbg.png');
+  }
+
+  .greenFlag {
+    background: #53ae3e url('http://s.cdpn.io/48308/flagbg.png');
+  }
+
+  .checkeredFlag {
+    background: url('http://s.cdpn.io/48308/checkeredflag.jpg');
+  }
+
+  .flagText {
+    text-align:center;
+    font-family: $font;
+    font-weight:bold;
+    text-transform:uppercase;
+    font-size:3.5em;
+    color: #fff;
+    z-index:1;
+  }
+
+  // Keyframes //
+
+  .flashingText {
+    -webkit-animation: flashingText 1s infinite; /* Safari 4+ */
+    -moz-animation:    flashingText 1s infinite; /* Fx 5+ */
+    -o-animation:      flashingText 1s infinite; /* Opera 12+ */
+    animation:         flashingText 1s infinite; /* IE 10+ */
+  }
+
 }
