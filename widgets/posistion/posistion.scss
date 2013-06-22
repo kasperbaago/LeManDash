@@ -24,6 +24,9 @@
 
 .widget-posistion {
     background: #29292a;
+    padding: 0 !important;
+    vertical-align: top !important;
+    height: 600px !important;
 
   // Wheather Colors //
   $tileColor: #c26022;
@@ -235,5 +238,23 @@
     background: linear-gradient(to bottom, #404040 0%,#313131 20%);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+  }
+
+  .retired {
+    .positionLeft, .positionMain {
+      background: black;
+    }
+  }
+
+ .pitOut {
+    .positionLeft, .positionMain {
+      background: darkgreen;
+    }
+  }
+
+ .pit {
+    .positionLeft, .positionMain {
+      background: darkred;
+    }
   }
 }
