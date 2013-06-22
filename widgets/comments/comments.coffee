@@ -10,6 +10,7 @@ class Dashing.Comments extends Dashing.Widget
     @startCarousel()
 
   onData: (data) ->
+    console.log(data);
     @currentIndex = 0
 
   startCarousel: ->
