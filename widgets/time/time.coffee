@@ -24,10 +24,7 @@ class Dashing.Time extends Dashing.Widget
       oldChecksum = data.md5
 
   updateClock: =>
-    if h <= 0
-      s--
-    else
-      s++;
+    s--;
 
     if s < 0
       s = 59
