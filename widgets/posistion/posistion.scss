@@ -72,6 +72,7 @@
     letter-spacing: 1px;
     color: #fff;
     z-index: 2;
+    font-weight: bold;
   }
 
   .positionDriver2Text{
@@ -94,7 +95,7 @@
 
   .positionBestTimeText{
     top:40px;
-    left:210px;
+    left:270px;
     font-size:1.2em;
     letter-spacing: 1px;
     color: #fff;
@@ -103,7 +104,16 @@
 
   .positionAvergeTimeText{
     top:70px;
-    left:182px;
+    left:262px;
+    font-size:1.2em;
+    letter-spacing: 1px;
+    color: #fff;
+    z-index: 3;
+  }
+
+  .positionLastTimeText {
+    top:100px;
+    left:262px;
     font-size:1.2em;
     letter-spacing: 1px;
     color: #fff;
@@ -192,8 +202,8 @@
 
     h1 {
       color: #313131;
-      font-size: 68px;
-      margin: -20px 0 0 2px;
+      font-size: 35px;
+      margin: 0 0 0 2px;
       text-aling: center;
     }
 

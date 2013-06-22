@@ -1,26 +1,27 @@
 <figure class="tile">
-    <article class="positionContainer">
+    <article class="positionContainer" data-foreach-item="cars">
         <div class="positionLeft">
-            <h2 class="positionPosText positionTextStyling">1</h2>
+            <h2 class="positionPosText positionTextStyling" data-bind="item.posistion"></h2>
         </div>
         <div class="positionMain">
-            <h3 class="positionCarText positionTextStyling">Audi R18 e-tron quattro</h3>
-            <h3 class="positionDriver1Text positionTextStyling">Tom Kristensen</h3>
-            <h3 class="positionDriver2Text positionTextStyling">Loïc Duval</h3>
-            <h3 class="positionDriver3Text positionTextStyling">Allan Mcnish</h3>
-            <h3 class="positionBestTimeText positionTextStyling">Best time: 3:25.130</h3>
-            <h3 class="positionAvergeTimeText positionTextStyling">Averge time: 3:25.130</h3>
+            <h3 class="positionCarText positionTextStyling"  data-bind="item.car">Audi R18 e-tron quattro</h3>
+            <h3 class="positionDriver1Text positionTextStyling"><span data-bind="item.driver.prenom"></span> <span data-bind="item.driver.nom"></span></h3>
+            <h3 class="positionDriver2Text positionTextStyling"><span data-bind="item.drivers[0].prenom"></span> <span data-bind="item.drivers[0].nom"></span></h3>
+            <h3 class="positionDriver3Text positionTextStyling"><span data-bind="item.drivers[1].prenom"></span> <span data-bind="item.drivers[1].nom"></span></h3>
+            <h3 class="positionBestTimeText positionTextStyling">Best: <span data-bind="item.besttime">3:25.130</span></h3>
+            <h3 class="positionAvergeTimeText positionTextStyling">Average: <span  data-bind="item.average">3:25.130</span></h3>
+            <h3 class="positionLastTimeText positionTextStyling">Last: <span  data-bind="item.lastLab">3:25.130</span></h3>
 
             <div class="positionCarNumber positionTextStyling">
-                <h3>NO.</h3><h1>2</h1>
+                <h3>NO.</h3><h1 data-bind="item.carNumber">2</h1>
             </div>
 
             <div class="positionClass positionTextStyling positionClassLmp1">
-                <h3>LM P1</h3>
+                <h3  data-bind="item.carclass">LM P1</h3>
             </div>
 
             <div class="positionLaps positionTextStyling">
-                <h1>32</h1><h3>laps</h3>
+                <h1 data-bind="item.laps">32</h1><h3>laps</h3>
             </div>
 
         </div>
