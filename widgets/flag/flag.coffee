@@ -16,5 +16,5 @@ class Dashing.Flag extends Dashing.Widget
     if data[0][2] == "1"
       flagStatus = "safetyCarStatus";
      else
-      flagstatus = flags[flagStatus];
+      flagStatus = flags[flagStatus];
     $(@node).find('.flag').attr('data-flagStatus', flagStatus);
