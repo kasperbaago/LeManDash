@@ -3,6 +3,23 @@
     height: 300px !important;
     padding: 0 !important;
 
+  //Show whehtertiles
+  .whetherstatus {
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .whetherstatusShow {
+    opacity: 1;
+  }
+
+  body {
+    background: #29292a;
+  }
+
   // Wheather Colors //
   $cloudColor: #f2f9fe;
   $sunColor: #fdd65a;
@@ -14,9 +31,7 @@
   // Tile for dashboard //
 
   .tile {
-    top: 0;
-    left: 0;
-    position: absolute;
+    position: relative;
     display:inline-block;
     margin: 0 auto;
     overflow:hidden;
@@ -53,16 +68,6 @@
     z-index: -1;
   }
 
-  //Show whehtertiles
-  .whetherstatus {
-    opacity: 0;
-    transition: opacity 250ms ease-in-out;
-  }
-
-  .whetherstatusShow {
-    opacity: 1;
-  }
-
   // degrees for dashboard //
 
   .degrees{
@@ -71,7 +76,8 @@
     left:30px;
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size:8em;
-    color: #000;
+    color: #fff;
+    text-shadow: 0px 4px 4px #000, 0px -4px 4px #000;
     z-index:1;
   }
 
@@ -105,7 +111,26 @@
   }
 
   .clearNightMoon {
+    position: relative;
+    margin: 65px auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background: adjust-color($sunColor, $hue: 20%, $saturation:-10%, $lightness: 10%);
+  }
 
+  .clearNightMoon:after {
+    content: '';
+    position: absolute;
+    background: adjust-color($tileColor, $hue: 20%, $saturation:-10%, $lightness:-55%);
+  }
+
+  .clearNightMoon:after {
+    width: 130px;
+    height: 142px;
+    top: -6px;
+    left: -20px;
+    border-radius: 100%;
   }
   //---END OF clear-night---//
 
@@ -328,7 +353,7 @@
 
   .partlyCloudyNightCloud {
     position: relative;
-    margin: 170px auto;
+    margin: 150px 40px;
     width: 175px;
     height: 60px;
     background: adjust-color($cloudColor, $saturation: -100%, $lightness:-24%);
@@ -344,7 +369,7 @@
   .partlyCloudyNightCloud:after{
     width: 50px;
     height: 50px;
-    top: -25px;
+    top: -20px;
     left: 25px;
     border-radius: 100px;
   }
@@ -352,11 +377,34 @@
   .partlyCloudyNightCloud:before{
     width: 90px;
     height: 90px;
-    top: -45px;
+    top: -40px;
     right: 25px;
     border-radius: 200px;
   }
 
-  //---END OF partly-cloudy-nigt---//
+  .partlyCloudyNightMoon {
+    position: absolute;
+    top: 70px;
+    right: 50px;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background: adjust-color($sunColor, $hue: 20%, $saturation:-10%, $lightness: 10%);
+  }
 
+  .partlyCloudyNightMoon:after {
+    content: '';
+    position: absolute;
+    background: adjust-color($tileColor, $hue: 24%, $saturation:-30%, $lightness:-58%);
+  }
+
+  .partlyCloudyNightMoon:after {
+    width: 80px;
+    height: 85px;
+    top: -6px;
+    left: -20px;
+    border-radius: 100%;
+  }
+
+  //---END OF partly-cloudy-nigt---//
 }
