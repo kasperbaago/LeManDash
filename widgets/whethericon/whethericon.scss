@@ -1,6 +1,7 @@
 .widget-whethericon {
     width: 300px !important;
     height: 300px !important;
+    padding: 0 !important;
 
   // Wheather Colors //
   $cloudColor: #f2f9fe;
@@ -67,7 +68,7 @@
   .degrees{
     position:absolute;
     top:75px;
-    left:64px;
+    left:30px;
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size:8em;
     color: rgba($red:$degreesColor,$green:$degreesColor,$blue:$degreesColor, $alpha:$degreesAlpha);

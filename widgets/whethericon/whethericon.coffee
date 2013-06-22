@@ -13,8 +13,8 @@ class Dashing.Whethericon extends Dashing.Widget
     icon = "." + icon;
 
     temp = data.data.temperature;
-    temp = Math.round(temp);
     temp = (temp - 32) * 5/9;
+    temp = Math.round(temp);
     @set('degrees', temp);
 
     $(@node).find('.whetherstatusShow').removeClass('whetherstatusShow');
