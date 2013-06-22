@@ -39,7 +39,7 @@ class Dashing.Posistion extends Dashing.Widget
         drivers: drivers,
         besttime: carData[5],
         average: carData[8],
-        carNumber: carData[11],
+        carNumber: team.num,
         carclass: category.nom,
         laps: carData[2],
         lastLab: carData[6],
