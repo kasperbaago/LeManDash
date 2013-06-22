@@ -10,9 +10,12 @@ class Dashing.Whethericon extends Dashing.Widget
     # You can access the html node of this widget with `@node`
     # Example: $(@node).fadeOut().fadeIn() will make the node flash each time data comes in.
     icon = data.data.icon;
+    icon = "." + icon;
 
     temp = data.data.temperature;
     temp = Math.round(temp);
+    temp = (temp - 32) * 5/9;
     @set('degrees', temp);
 
-    $(@node).find('.whetherIcon').attr('data-icon', icon);
+    $(@node).find('.whetherstatusShow').removeClass('whetherstatusShow');
+    $(@node).find(icon).addClass('whetherstatusShow');

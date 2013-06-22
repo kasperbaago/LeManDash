@@ -3,10 +3,10 @@
     height: 300px !important;
 
   // Wheather Colors //
-  $tileColor: #abd8e7;
   $cloudColor: #f2f9fe;
   $sunColor: #fdd65a;
   $rainColor:#50666b;
+  $tileColor: #abd8e7;
   $degreesColor: 255;
   $degreesAlpha: 0.8;
 
@@ -36,7 +36,6 @@
     transition: transform 1s;
     transform: rotateX(90deg);
     z-index: -2;
-    opacity: 0;
   }
 
   .tile:after {
@@ -51,7 +50,16 @@
     transition: transform 1s;
     transform: rotateX(90deg);
     z-index: -1;
+  }
+
+  //Show whehtertiles
+  .whetherstatus {
     opacity: 0;
+    transition: opacity 250ms ease-in-out;
+  }
+
+  .whetherstatusShow {
+    opacity: 1;
   }
 
   // degrees for dashboard //
@@ -73,7 +81,7 @@
 
   //---SUN---//
 
-.whetherIcon[data-icon=clear-day] .clearDayTile .clearDaySun {
+  .clearDaySun {
     position:absolute;
     top: 75px;
     left: 75px;
@@ -90,15 +98,14 @@
   //----WEATHER TYPE----//
   //---clear-night---//
   */
-.whetherIcon[data-icon=clear-night] {
+
   .clearNightTile {
-    background-color: adjust-color($tileColor, $hue: 20%, $saturation:-10%, $lightness:-55%);
+    background: adjust-color($tileColor, $hue: 20%, $saturation:-10%, $lightness:-55%);
   }
 
   .clearNightMoon {
 
   }
-}
   //---END OF clear-night---//
 
 
@@ -109,7 +116,7 @@
   */
 
   //---CLOUD---//
-.whetherIcon[data-icon=rain] {
+
   .rainTile {
     background: adjust-color($tileColor, $hue: -10%, $saturation:-30%, $lightness:-15%);
   }
@@ -145,7 +152,6 @@
     border-radius: 200px;
   }
 
-
   //---RAIN---//
 
   .rainRain {
@@ -180,7 +186,6 @@
     left: 90px;
     border-radius: 3px;
   }
-}
 
   //---END OF rain---//
 
@@ -189,7 +194,6 @@
   //----WEATHER TYPE----//
   //---wind---//
   */
-.whetherIcon[data-icon=wind] {
   .windTile {
     background: adjust-color($tileColor, $hue: 20%, $saturation:-30%, $lightness:-33%);
   }
@@ -197,7 +201,6 @@
   .windWind {
 
   }
-}
   //---END OF wind---//
 
 
@@ -205,7 +208,6 @@
   //----WEATHER TYPE----//
   //---fog---//
   */
-.whetherIcon[data-icon=fog] {
   .fogTile {
     background: adjust-color($tileColor, $saturation:-100%, $lightness:-13%);
   }
@@ -213,7 +215,6 @@
   .fogFog {
 
   }
-}
   //---END OF fog---//
 
 
@@ -225,7 +226,7 @@
 
 
   //---SUN---//
-.whetherIcon[data-icon=partly-cloudy-day] {
+
   .partlyCloudyDaySun {
     position:absolute;
     top: 80px;
@@ -269,7 +270,6 @@
     right: 25px;
     border-radius: 200px;
   }
-}
 
   //---END OF partly-cloudy-day---//
 
@@ -278,7 +278,6 @@
   //----WEATHER TYPE----//
   //---cloudy-day---//
   */
-.whetherIcon[data-icon=cloudy] {
   .cloudyTile {
     background: adjust-color($tileColor, $hue: 10%, $lightness:-12%);
   }
@@ -317,12 +316,11 @@
   }
 
   //---END OF cloudy-day---//
-}
+
   /*
 //----WEATHER TYPE----//
 //---partly-cloudy-nigt---//
 */
-.whetherIcon[data-icon=partly-cloudy-nigt] {
   .partlyCloudyNightTile {
     background: adjust-color($tileColor, $hue: 24%, $saturation:-30%, $lightness:-58%);
   }
@@ -357,7 +355,7 @@
     right: 25px;
     border-radius: 200px;
   }
-}
-}
 
   //---END OF partly-cloudy-nigt---//
+
+}

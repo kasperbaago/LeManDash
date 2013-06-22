@@ -1,46 +1,61 @@
 <div class="whetherIcon">
-    <figure class="tile clearDayTile clear-day">
-        <figcaption class="degrees" data-bind="degrees"></figcaption>
-        <div class="clearDaySun">
-        </div>
-    </figure>
+    <div class="clear-day whetherstatus">
+        <figure class="tile clearDayTile">
+            <figcaption class="degrees"><span data-bind="degrees"></span>&deg;</figcaption>
+            <div class="clearDaySun">
+            </div>
+        </figure>
+    </div>
 
-    <figure class="tile clearNightTile clear-night">
-        <figcaption class="degress" data-bind="degrees">10&deg;</figcaption>
+    <div class="clear-night whetherstatus">
+    <figure class="tile clearNightTile">
+        <figcaption class="degress"><span data-bind="degrees"></span>&deg;</figcaption>
         <div class="clearNightMoon"></div>
     </figure>
+    </div>
 
-    <figure class="tile rainTile rain">
-        <figcaption class="degrees" data-bind="degrees">12&deg;</figcaption>
-        <div class="rainCloud">
-            <div class="rainRain"></div>
-        </div>
-    </figure>
+    <div class="rain whetherstatus">
+        <figure class="tile rainTile">
+            <figcaption class="degrees"><span data-bind="degrees"></span>&deg;</figcaption>
+            <div class="rainCloud">
+                <div class="rainRain"></div>
+            </div>
+        </figure>
+    </div>
 
-    <figure class="tile windTile wind">
-        <figcaption class="degrees" data-bind="degrees">11&deg;</figcaption>
-        <div class="windWind"></div>
-    </figure>
+    <div class="wind whetherstatus">
+        <figure class="tile windTile">
+            <figcaption class="degrees"><span data-bind="degrees"></span>&deg;</figcaption>
+            <div class="windWind"></div>
+        </figure>
+    </div>
 
-    <figure class="tile fogTile fog">
-        <figcaption class="degrees" data-bind="degrees">14&deg;</figcaption>
-        <div class="fogFog"></div>
-    </figure>
+    <div class="fog whetherstatus">
+        <figure class="tile fogTile">
+            <figcaption class="degrees"><span data-bind="degrees"></span>&deg;</figcaption>
+            <div class="fogFog"></div>
+        </figure>
+    </div>
 
-    <figure class="tile cloudyTile cloudy">
-        <figcaption class="degrees" data-bind="degrees">17&deg;</figcaption>
-        <div class="cloudyCloud"></div>
-    </figure>
+    <div class="cloudy whetherstatus">
+        <figure class="tile cloudyTile ">
+            <figcaption class="degrees"><span data-bind="degrees"></span>&deg;</figcaption>
+            <div class="cloudyCloud"></div>
+        </figure>
+    </div>
+    <div class="partly-cloudy-day whetherstatus">
+        <figure class="tile partlyCloudyDayTile">
+            <figcaption class="degrees"><span data-bind="degrees"></span>&deg;</figcaption>
+            <div class="partlyCloudyDaySun"></div>
+            <div class="partlyCloudyDayCloud"></div>
+        </figure>
+    </div>
 
-    <figure class="tile partlyCloudyDayTile partly-cloudy-day">
-        <figcaption class="degrees" data-bind="degrees">19&deg;</figcaption>
-        <div class="partlyCloudyDaySun"></div>
-        <div class="partlyCloudyDayCloud"></div>
-    </figure>
-
-    <figure class="tile partlyCloudyNightTile partly-cloudy-night">
-        <figcaption class="degrees" data-bind="degrees">13&deg;</figcaption>
-        <div class="partlyCloudyNightMoon"></div>
-        <div class="partlyCloudyNightCloud"></div>
-    </figure>
+    <div class="partly-cloudy-night whetherstatus">
+        <figure class="tile partlyCloudyNightTile">
+            <figcaption class="degrees"><span data-bind="degrees"></span>&deg;</figcaption>
+            <div class="partlyCloudyNightMoon"></div>
+            <div class="partlyCloudyNightCloud"></div>
+        </figure>
+    </div>
 </div>
