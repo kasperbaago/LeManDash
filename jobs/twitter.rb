@@ -12,7 +12,7 @@ end
 
 search_term = URI::encode('#LM24')
 
-SCHEDULER.every '10m', :first_in => 0 do |job|
+SCHEDULER.every '5m', :first_in => 0 do |job|
   begin
     tweets = Twitter.search("#{search_term}").results
 
