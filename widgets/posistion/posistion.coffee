@@ -17,8 +17,11 @@ class Dashing.Posistion extends Dashing.Widget
 
       team = tabEngages[carData[9]];
       teamCarData = tabVehicules[team.voiture];
+      carMarque = tabMarques[teamCarData.marque];
+
       driver = tabPilotes[carData[0]];
       category = tabCategories[team.categorie];
+
 
       drivers = [ ];
       i = 0;
@@ -34,7 +37,7 @@ class Dashing.Posistion extends Dashing.Widget
 
       list[car] = {
         posistion: car,
-        car: teamCarData.nom,
+        car: carMarque + " - " + teamCarData.nom,
         driver: driver,
         drivers: drivers,
         besttime: carData[5],
