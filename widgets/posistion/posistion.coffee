@@ -15,6 +15,8 @@ class Dashing.Posistion extends Dashing.Widget
     for car of cars
       carData = cars[car];
 
+      status = carData[1];
+
       team = tabEngages[carData[9]];
       teamCarData = tabVehicules[team.voiture];
       carMarque = tabMarques[teamCarData.marque];
@@ -46,6 +48,7 @@ class Dashing.Posistion extends Dashing.Widget
         carclass: category.nom,
         laps: carData[2],
         lastLab: carData[6],
+        status: status,
       }
 
       if car >= shownItems
@@ -53,3 +56,14 @@ class Dashing.Posistion extends Dashing.Widget
 
     console.log(list);
     @set('cars', list);
+    $(@node).find('article').each ->
+      pos = $(this).index() + 1;
+      status = list[pos].status;
+      if status == 1
+        $(this).addClass('retired');
+      else if status == 2
+        $(this).addClass('run');
+      else if status == 3
+        $(this).addClass('pitOut');
+      else if status == 4
+        $(this).addClass('pit');
