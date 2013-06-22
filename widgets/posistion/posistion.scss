@@ -1,0 +1,239 @@
+@mixin border-radius($radius:0px) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -o-border-radius: $radius;
+  -ms-border-radius: $radius;
+}
+
+@mixin box-shadow($shadow) {
+  box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+  -o-box-shadow: $shadow;
+  -ms-box-shadow: $shadow;
+}
+
+@mixin background-clip($cliptype) {
+  background-clip: $cliptype;
+  -webkit-background-clip: $cliptype;
+  -moz-background-clip: $cliptype;
+  -o-background-clip: $cliptype;
+  -ms-background-clip: $cliptype;
+}
+
+.widget-posistion {
+    background: #29292a;
+
+  // Wheather Colors //
+  $tileColor: #c26022;
+
+  // Tile for dashboard //
+
+  .tile {
+    position: relative;
+    display:inline-block;
+    margin: 0 auto;
+    overflow:hidden;
+    width:600px;
+    height:600px;
+    background-color: $tileColor;
+  }
+
+  .positionTextStyling{
+    position:absolute;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:normal;
+    color: #fff;
+  }
+
+  .positionPosText{
+    top:-10px;
+    left:10px;
+    font-size:4em;
+    z-index: 1;
+  }
+
+  .positionCarText{
+    position:absolute;
+    top: 0px;
+    left:15px;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:normal;
+    font-size:1.5em;
+    letter-spacing: 1px;
+    color: #fff;
+  }
+
+  .positionDriver1Text{
+    top:40px;
+    left:15px;
+    font-size:1.2em;
+    letter-spacing: 1px;
+    color: #fff;
+    z-index: 2;
+    font-weight: bold;
+  }
+
+  .positionDriver2Text{
+    top:70px;
+    left:15px;
+    font-size:1.2em;
+    letter-spacing: 1px;
+    color: #fff;
+    z-index: 3;
+  }
+
+  .positionDriver3Text{
+    top:100px;
+    left:15px;
+    font-size:1.2em;
+    letter-spacing: 1px;
+    color: #fff;
+    z-index: 3;
+  }
+
+  .positionBestTimeText{
+    top:40px;
+    left:270px;
+    font-size:1.2em;
+    letter-spacing: 1px;
+    color: #fff;
+    z-index: 3;
+  }
+
+  .positionAvergeTimeText{
+    top:70px;
+    left:262px;
+    font-size:1.2em;
+    letter-spacing: 1px;
+    color: #fff;
+    z-index: 3;
+  }
+
+  .positionLastTimeText {
+    top:100px;
+    left:262px;
+    font-size:1.2em;
+    letter-spacing: 1px;
+    color: #fff;
+    z-index: 3;
+  }
+
+  .positionCarNumber{
+    width:83px;
+    height:30px;
+    top:30px;
+    left:456px;
+    z-index: 3;
+    color:#fff;
+
+    h1 {
+      margin:-59px 0 0 30px;
+      font-size: 40px;
+      text-transform:uppercase;
+    }
+
+    h3 {
+      font-size: 14px;
+
+      text-transform:uppercase;
+    }
+  }
+
+  .positionClass{
+    width:83px;
+    height:20px;
+    top:50px;
+    left:446px;
+    letter-spacing: 1px;
+    z-index: 3;
+
+    h3 {
+      font-size: 15px;
+      text-align:center;
+      margin:0 0 0 6px;
+      color: #313131;
+      text-transform:uppercase;
+    }
+  }
+
+  .positionClassLmp1 {
+    @include border-radius(3px);
+    @include background-clip(padding-box);
+    background-color: #d11a1a;
+    @include box-shadow(inset 0 0 3px #6c6c6c);
+  }
+
+  .positionClassLmp2 {
+    @include border-radius(3px);
+    @include background-clip(padding-box);
+    background-color: #2155ff;
+    @include box-shadow(inset 0 0 3px #6c6c6c);
+  }
+
+  .positionClassGtepro {
+    @include border-radius(3px);
+    @include background-clip(padding-box);
+    background-color: #1ce717;
+    @include box-shadow(inset 0 0 3px #6c6c6c);
+  }
+
+  .positionClassGteam {
+    @include border-radius(3px);
+    @include background-clip(padding-box);
+    background-color: #e2df00;
+    @include box-shadow(inset 0 0 3px #6c6c6c);
+  }
+
+  .positionLaps{
+    width:83px;
+    height:90px;
+    top:76px;
+    left:446px;
+    font-size:1.2em;
+    letter-spacing: 1px;
+    color: #fff;
+    z-index: 3;
+    @include border-radius(3px);
+    @include background-clip(padding-box);
+    background-color: #d16725;
+    @include box-shadow(inset 0 0 3px #6c6c6c);
+
+    h1 {
+      color: #313131;
+      font-size: 35px;
+      margin: 0 0 0 2px;
+      text-aling: center;
+    }
+
+    h3 {
+      font-size: 26px;
+      margin:-15px 0 0 6px;
+      color: #313131;
+      text-transform:uppercase;
+    }
+  }
+
+  .positionContainer{margin-bottom:36px}
+
+  .positionLeft {
+    position: relative;
+    margin-top: 60px;
+    width: 50px;
+    height: 100px;
+    background: #313131;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .positionMain {
+    position:relative;
+    margin: -140px 0 0 50px;
+    width: 540px;
+    height: 174px;
+    background: linear-gradient(to bottom, #404040 0%,#313131 20%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+}
