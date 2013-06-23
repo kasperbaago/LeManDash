@@ -4,10 +4,10 @@ require 'twitter'
 #### Get your twitter keys & secrets:
 #### https://dev.twitter.com/docs/auth/tokens-devtwittercom
 Twitter.configure do |config|
-  config.consumer_key = 'rs1Q5tiwJZzfC8R97w6iA'
-  config.consumer_secret = 'b5LM3Uwj5YQ283a3XS3aF7nNw3minPIrpPnDAHY0E'
-  config.oauth_token = '138869578-xnE5cMJGlW7JK1zoccfkNFUGvYBXeLNM6Zy9A1pr'
-  config.oauth_token_secret = 'afxt4x2fqaPPmwxYigJNrt3Hsf76ChdVrKqw6l3yjUE'
+  config.consumer_key = ''
+  config.consumer_secret = ''
+  config.oauth_token = ''
+  config.oauth_token_secret = ''
 end
 
 search_term = URI::encode('#LM24')
